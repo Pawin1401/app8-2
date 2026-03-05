@@ -20,7 +20,6 @@ function rd(min, max) {
 }
 
 app.get('/api/football-result', (request, response) => {
-    // แก้ไข: ใช้เครื่องหมาย ` (backtick) แทนการปล่อยว่างไว้เฉยๆ
     let table = `
         <table border="1" style="margin: 7px auto">
             <tr><td>ManU</td><td>${rd(0, 5)}-${rd(0, 5)}</td><td>Liverpool</td></tr>
@@ -32,7 +31,6 @@ app.get('/api/football-result', (request, response) => {
 })
 
 app.get('/api/form-get', (request, response) => {
-    // แก้ไข: เติม || เพื่อกำหนดค่าเริ่มต้นกรณีไม่มีข้อมูลส่งมา
     let t = request.query.target || ''
     let k = request.query.kw || ''
     let n = Math.floor(Math.random() * 1000)

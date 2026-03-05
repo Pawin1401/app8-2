@@ -8,7 +8,7 @@ export default function FormGet(){
         event.preventDefault()
 
         const formData = new FormData(form.current)
-        let params = new URLSearchParams(formData)//.tostring()
+        let params = new URLSearchParams(formData)
         let URL = '/api/form-get?' + params
         fetch(URL)
         .then(response => response.json())
